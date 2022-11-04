@@ -1,0 +1,22 @@
+#include <unistd.h>
+
+void	ft_is_negative(int *nb)
+{
+	if(nb >= 0 && !(nb <= 0))
+		write(1, "P", 1);
+	if (nb < 0)
+		write(1, "N", 1);
+}
+
+int	main(int ac, int  **av)
+{
+	int i = 1;
+	if(ac >= 2)
+	{
+		ft_is_negative(av[i]);
+		write(1, "\n", 1);
+		i++;
+	}
+	return (0);
+
+}
